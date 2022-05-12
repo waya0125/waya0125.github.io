@@ -80,7 +80,7 @@ html, body, main, section, header, footer {
 }
 
 /* Google Noto Sans JPの文字サイズではなく太さを指定するコード。
-呼び出し形式はclassなので class="weught100" などで呼び出し可能。
+呼び出し形式はclassなので class="weight100" などで呼び出し可能。
 なお追記方法は <h1 class>など。詳しい例題は https://waya0125.github.io/blogs/2021/20210115.html
 の内容を確認して下さい */
 .weight100 {
