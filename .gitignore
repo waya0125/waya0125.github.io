@@ -10,3 +10,4 @@
 .htpasswd
 .htaccess
 *.db
+*.ini
