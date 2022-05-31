@@ -71,6 +71,15 @@ body {
     margin: 0;
 }
 
+.body_i a {
+    color: #fff;
+}
+
+/*ポイント時のリンク*/
+.body_i a:hover {
+    color: #cfcfcf;
+}
+
 html, body, main, section, header, footer {
     margin: 0;
     padding: 0;
