@@ -232,7 +232,7 @@ header .headline {
 
 body:not(.rtm-license-body) footer {
     width: 100%;
-    height: 48px;
+    height: 58px;
     margin: 0;
     padding: 0;
     left: 0vh;
@@ -267,6 +267,15 @@ ul.footer-menu,footer p {
     margin: 0;
     padding: 0;
     list-style: none;
+}
+
+ul.footer-menu,footer a {
+    color: #fff;
+}
+
+/*ポイント時のリンク*/
+ul.footer-menu,footer a:hover {
+    color: #cfcfcf;
 }
 
 /* 装飾 */
@@ -316,6 +325,14 @@ ul.footer-menu,footer p {
 
 .text-align-left {
     text-align: left;
+}
+
+.text-align-right {
+    text-decoration: underline;
+}
+
+.text-align-center {
+    text-decoration: underline;
 }
 
 .text-underline {
@@ -465,12 +482,23 @@ main.profile .for-index-link a {
     color: #ffffff;
     text-decoration : none;
 }
-a {
-    color: #000000;
-    text-decoration : none;
-}
+
+/*未訪問のリンク*/
+/*a:link {
+    color: #555555;
+}*/
+/*訪問済みのリンク*/
+/*a:visited {
+    color: #383838;
+}*/
+/*ポイント時のリンク*/
 a:hover {
-    text-decoration : none;
+    color: #ec4e4e;
+    text-decoration: none;
+}
+/*選択中のリンク*/
+a:active {
+    color: #ee1b1b;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -485,12 +513,26 @@ a:hover {
     }
 
     a {
-        color: #ffffff;
+        color: #ffc77e;
         text-decoration: none;
     }
 
+    /*未訪問のリンク*/
+    /*a:link {
+        color: #fdb453;
+    }*/
+    /*訪問済みのリンク*/
+    /*a:visited {
+        color: #cf8525;
+    }*/
+    /*ポイント時のリンク*/
     a:hover {
+        color: #e65454;
         text-decoration: none;
+    }
+    /*選択中のリンク*/
+    a:active {
+        color: #e62222;
     }
 
     .profile-section .flex6_1 {
