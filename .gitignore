@@ -3,6 +3,8 @@
 /[Hh]yper[Cc]asual[Gg]ame_QWOP/
 /[Rr]eal[Tt]rain[Mm]od/
 /_h5ai/
+/wordpress/
+/wav/
 
 *.exe
 *.7z
