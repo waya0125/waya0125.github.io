@@ -20,7 +20,7 @@ if ( $file and is_readable($file) and $ext
 ?>
 <html>
   <head>
-    <link rel="stylesheet" type="text/css" href="settings/waya_site-markdown.css">
+    <link rel="stylesheet" type="text/css" href="https://waya0125.com/settings/waya_site-markdown.css">
   </head>
   <body>
     <?php print $html; ?>
