@@ -1,11 +1,13 @@
 /[Dd]ownload/
 /[Dd]ownloads/
+/[Dd]ownloads_W/
 /[Hh]yper[Cc]asual[Gg]ame_QWOP/
 /[Rr]eal[Tt]rain[Mm]od/
 /_h5ai/
 /wordpress/
 /wav/
 /settings/php-markdown/
+/[Ss]chool/
 
 *.exe
 *.7z
@@ -17,3 +19,4 @@
 *.mp4
 *.unitypackage
 SignalControllerMod.jar
+.well-known/acme-challenge/web.config
