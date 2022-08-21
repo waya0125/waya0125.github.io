@@ -264,6 +264,7 @@ ul.footer-menu li:not(:last-child)::after {
 }
 
 ul.footer-menu,footer p {
+    color: #fff;
     margin: 0;
     padding: 0;
     list-style: none;
