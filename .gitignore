@@ -21,3 +21,4 @@
 SignalControllerMod.jar
 .well-known/acme-challenge/web.config
 *.iso
+*.db
