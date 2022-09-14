@@ -3,21 +3,7 @@
 
 /*--Googleのフォント関連設定--*/
 /*@import url(//fonts.googleapis.com/earlyaccess/notosansjp.css);*/
-/*@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300..900&display=swap');*/
-
-@font-face { /* noto-sans-jp-regular - latin_japanese */
-	font-family: 'Noto Sans JP';
-	font-style: normal;
-	font-weight: 400;
-	font-display: swap;
-	src: url('//waya0125.github.io/settings/fonts/noto-sans-jp-v28-latin_japanese-regular.eot'); /* IE9 Compat Modes */
-	src: local(''),
- 		 url('//waya0125.github.io/settings/fonts/noto-sans-jp-v28-latin_japanese-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
- 		 url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300..900&display=swap') format('woff2'), /* Super Modern Browsers */
- 		 url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300..900&display=swap') format('woff'), /* Modern Browsers */
- 		 url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300..900&display=swap') format('truetype'), /* Safari, Android, iOS */
- 		 url('//waya0125.github.io/settings/fonts/noto-sans-jp-v28-latin_japanese-regular.svg#NotoSansJP') format('svg'); /* Legacy iOS */
-}
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;900&display=swap');
 
 /* indexにする場合はこれを専用に貼る
 <style>
