@@ -2,7 +2,8 @@
 @charset "UTF-8";
 
 /*--Googleのフォント関連設定--*/
-@import url(//fonts.googleapis.com/earlyaccess/notosansjp.css);
+/*@import url(//fonts.googleapis.com/earlyaccess/notosansjp.css);*/
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300..900&display=swap');
 
 html{
         font-family: 'Noto Sans JP', sans-serif;
