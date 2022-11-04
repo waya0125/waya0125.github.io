@@ -1,6 +1,9 @@
 /*CSS 設定用エリア*/
 @charset "UTF-8";
 
+/*外部アイコンをインポートするために*/
+/*@import url('https://css.gg/screen.css');*/
+
 /*--Googleのフォント関連設定--*/
 /*@import url(//fonts.googleapis.com/earlyaccess/notosansjp.css);*/
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap');
@@ -645,5 +648,7 @@ a:active {
 }
 
 /* デバイスの横幅が320px以下の場合 */
+
+/* アイコンなど */
 
 /*User agent Stylesheet無効用用*/
