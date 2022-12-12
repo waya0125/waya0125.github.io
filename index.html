@@ -1,0 +1,15 @@
+<html>
+    <head>
+        <title>waya0125.comへ転送</title>
+        <script>
+            if (isMobileDevice()) {
+                var redirect_url = "https://waya0125.com/" + location.search;
+                if (document.referrer) {
+                    var referrer = "referrer=" + encodeURIComponent(document.referrer);
+                    redirect_url = redirect_url + (location.search ? '&' : '?') + referrer;
+                }
+                location.href = redirect_url;
+            }
+        </script>
+    </head>
+</html>
