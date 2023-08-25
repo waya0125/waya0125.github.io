@@ -8,88 +8,102 @@
 <!doctype html>
 <html class="no-js" lang="ja">
     <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+        <!-- HTML Setting -->
         <meta charset="utf-8">
-        <title>Tetris Beta</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noindex, nofollow">
 
-        <meta property="og:title" content="">
-        <meta property="og:type" content="">
-        <meta property="og:url" content="">
-        <meta property="og:image" content="">
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="img/ico/favicon.ico">
 
-        <!-- Place favicon.ico in the root directory -->
-
-        <link rel="stylesheet" href="css/tetris_modoki.css">
-
-        <meta name="theme-color" content="#fafafa">
+        <!-- Title 概要設定 -->
+        <title>Tetris modoki</title>
+        <meta name="description" content="テトリスもどきです。">
+        <meta property="og:type" content="article">
+        <meta property="og:locale" content="ja_JP">
+        <meta name="theme-color" content="#158181">
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:site" content="@wayamoti2015">
+        <meta name="twitter:creator" content="@wayamoti2015">
+        <meta property="og:image" content="img/png/GameBoyModoki.png">
         <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="css/tetris_modoki.css">
     </head>
     <body>
-    <h1>README</h1>
-    <p>テトリスのようなゲームです。</p>
-    <p>※ 最初のブロックだけ表示されません ※</p>
-    <p>※ スマホだと正しく描画・再生されない可能性があります ※</p>
-    <h1>操作方法</h1>
-    <table>
-        <tr>
-            <th>キー</th>
-            <th>操作</th>
-        </tr>
-        <tr>
-            <td>A/←</td>
-            <td class="text-align-left">左移動</td>
-        </tr>
-        <tr>
-            <td>D/→</td>
-            <td class="text-align-left">右移動</td>
-        </tr>
-        <tr>
-            <td>S/↓</td>
-            <td class="text-align-left">ソフトドロップ</td>
-        </tr>
-        <tr>
-            <td>W/Space</td>
-            <td class="text-align-left">ハードドロップ</td>
-        </tr>
-        <tr>
-            <td>Q/Z</td>
-            <td class="text-align-left">左回転</td>
-        </tr>
-        <tr>
-            <td>E/↑</td>
-            <td class="text-align-left">右回転</td>
-        </tr>
-    </table>
+        <h1>README</h1>
+        <p>テトリスのようなゲームです。</p>
+        <p>※ 最初のブロックだけ表示されません ※</p>
 
-    <br>
+        <h1>操作方法</h1>
+        <table>
+            <tr>
+                <th>キー</th>
+                <th>操作</th>
+            </tr>
+            <tr>
+                <td>A/←</td>
+                <td class="text-align-left">左移動</td>
+            </tr>
+            <tr>
+                <td>D/→</td>
+                <td class="text-align-left">右移動</td>
+            </tr>
+            <tr>
+                <td>S/↓</td>
+                <td class="text-align-left">ソフトドロップ</td>
+            </tr>
+            <tr>
+                <td>W/Space</td>
+                <td class="text-align-left">ハードドロップ</td>
+            </tr>
+            <tr>
+                <td>Q/Z</td>
+                <td class="text-align-left">左回転</td>
+            </tr>
+            <tr>
+                <td>E/↑</td>
+                <td class="text-align-left">右回転</td>
+            </tr>
+            <tr>
+                <td>ESC</td>
+                <td class="text-align-left">一時停止</td>
+            </tr>
+        </table>
+        詳細は <a href="README.html">README</a> を参照
 
-    <h2><div id="playingState">停止中</div></h2>
+        <br>
 
-    <br>
+        <!-- ステータス表示 -->
+        <h2>ゲームの状態</h2>
+        <div id="playingState">停止中</div>
 
-    <div class="tetris resize">
-        <div id="tetriminoDraw"></div>
-        <div id="tetriminoScore">
-            <div class="scoreTitle gbFont">SCORE</div>
-            <div id="score" class="gbFont">0</div>
-            <div class="levelTitle gbFont">LEVEL</div>
-            <div id="level" class="gbFont">1</div>
-            <div class="linesTitle gbFont">LINES</div>
-            <div id="lines" class="gbFont">0</div>
-            <div id="nextBlockViewer"></div>
+        <br>
+
+        <!-- テトリミノ表示 -->
+        <div class="tetris">
+            <div id="tetriminoDraw"></div>
+            <div id="tetriminoScore">
+                <div class="scoreTitle gbFont">SCORE</div>
+                <div id="score" class="gbFont">0</div>
+                <div class="levelTitle gbFont">LEVEL</div>
+                <div id="level" class="gbFont">1</div>
+                <div class="linesTitle gbFont">LINES</div>
+                <div id="lines" class="gbFont">0</div>
+                <div id="nextBlockViewer"></div>
+            </div>
         </div>
-    </div>
 
-    <div id="buttons">
-        <input type="button" id="playing" value="⏯">
-        <input type="button" id="rotate" value="🔁">
-        <input type="button" id="left" value="←">
-        <input type="button" id="up" value="↑">
-        <input type="button" id="right" value="→">
-        <input type="button" id="down" value="↓">
-    </div>
+        <!-- テトリミノ操作ボタン (スマホ用) -->
+        <div id="buttons">
+            <input type="button" class="emojiFont" id="playing" value="⏯">
+            <input type="button" class="emojiFont" id="rotate" value="🔁">
+            <input type="button" class="emojiFont" id="left" value="←">
+            <input type="button" class="emojiFont" id="up" value="↑">
+            <input type="button" class="emojiFont" id="right" value="→">
+            <input type="button" class="emojiFont" id="down" value="↓">
+        </div>
 
-    <script src="js/tetris_modoki/main.js"></script>
+        <script src="js/main.js"></script>
     </body>
 </html>
