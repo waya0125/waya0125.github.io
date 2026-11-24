@@ -225,62 +225,77 @@ const devices = [
   { maker: "Earthsoft", name: "PT3", conn: "PCIe", band: "地デジ・BS・CS", bcas: "外付けリーダー", prep: true,
     win: { mark: "ok", date: "未確認", repos: ["tkmsst/BonDriver_PT3-ST", [BMK, "Mirakurun 経由"]] },
     linux: { mark: "good", date: "2026-11-09", repos: ["Till0196/coax", "kazuki0824/recisdb-rs"] },
+    official: [["製品ページ", "https://earthsoft.jp/PT3/"], ["ドライバー", "https://earthsoft.jp/PT3/download.html"]], officialNote: "",
     note: "Mirakurun（coax）で常用し、KonomiTV で視聴しています。BS は 2026-11-09 まで recisdb で受信していましたが、Ubuntu 26.04 で BS01_0 を受信できなくなったため coax に移行しました。" },
   { maker: "Earthsoft", name: "PT2", conn: "PCI", band: "地デジ・BS・CS", bcas: "外付けリーダー", prep: true,
     win: { mark: "ok", date: "未確認", repos: [["hyrolean/BonPTxWDM", "pt2wdm 用"], [BMK, "Mirakurun 経由"]] },
     linux: { mark: "good", date: "2026-06-02", repos: ["Till0196/coax", "kazuki0824/recisdb-rs"] },
+    official: [["製品ページ（PT1・PT2 共通）", "https://earthsoft.jp/PT1_PT2/index.html"], ["ドライバー", "https://earthsoft.jp/PT1_PT2/download.html"]], officialNote: "",
     note: "別の PC で Mirakurun（coax）を動かし、ネットワーク越しに KonomiTV で視聴しています。" },
   { maker: "PIXELA", name: "PIX-SMB400", conn: "単体（本体で Mirakurun を動かす）", band: "地デジ・BS・CS・BS4K", bcas: "本体内蔵（A-CAS、要確認）", prep: true,
     win: { mark: "ok", date: "未確認", repos: [[BMK, "Mirakurun 経由"]] },
     linux: { mark: "good", date: "2026-11-05", repos: [["tsuyopon123/pix-smb400-mirakurun", "これを元に改造"]] },
+    official: [["製品ページ", "https://www.pixela.co.jp/products/smarttuner/pix_smb400/"], ["サポートガイド", "https://www.pixela.co.jp/products/smarttuner/pix_smb400/support_guide.html"]], officialNote: "",
     note: "本体で Mirakurun を動かし、ネットワーク越しに KonomiTV で視聴しています。BS8K には対応していません。" },
   { maker: "Sony", name: "torne CECH-ZD1J", conn: "USB（PS3 用）", band: "地デジ", bcas: "本体の差込口（外付けも可）", prep: true,
     win: { mark: "ok", date: "未確認", repos: [["Till0196/BonDriver_coax", "coax 経由"], [BMK, "Mirakurun 経由"]] },
     linux: { mark: "good", date: "2026-10-27", repos: ["Till0196/coax", "mihalinn/torne_drv"] },
+    official: [], officialNote: "PC 用の公式ドライバーはありません。",
     note: "Mirakurun（coax）で 3 台を常用しています。KonomiTV でのライブ視聴と、EDCB 経由の予約録画を確認しました。" },
   { maker: "I-O DATA", name: "GV-MVP/VZ", conn: "USB 04bb:052b", band: "地デジ・BS・CS", bcas: "本体の差込口", prep: true,
     win: { mark: "ok", date: "2026-11-18", repos: ["nuIlpointer/BonDriver_GVMVPVZ"] },
     linux: { mark: "ok", date: "2026-11-19", repos: ["waya0125/recgvmvp"] },
+    official: [["製品ページ", "https://www.iodata.jp/product/av/tidegi/gv-mvpvz/"], ["サポートライブラリ", "https://www.iodata.jp/lib/product/g/3338.htm"]], officialNote: "",
     note: "地デジ・BS・CS とも 60 秒の録画でドロップ 0。Mirakurun 経由で GV-MVP/HZ と同時に録画できます。BS・CS のアンテナには電源を供給しません。" },
   { maker: "I-O DATA", name: "GV-MVP/HZ", conn: "USB 04bb:0522", band: "地デジ", bcas: "本体の差込口", prep: true,
     win: { mark: "good", date: "2026-11-23", repos: ["waya0125/BonDriver_GVMVPHZ"] },
     linux: { mark: "ok", date: "2026-11-19", repos: ["waya0125/recgvmvp"] },
+    official: [["製品ページ", "https://www.iodata.jp/product/av/tidegi/gv-mvphz/"], ["サポートライブラリ", "https://www.iodata.jp/lib/product/g/2095.htm"]], officialNote: "",
     note: "Mirakurun 経由で GV-MVP/VZ と同時に録画し、ドロップ 0 でした。" },
   { maker: "I-O DATA", name: "GV-MVP/AZ", conn: "調査中", band: "地デジ", bcas: "調査中", prep: true,
     win: { mark: "ok", date: "—", repos: ["nuIlpointer/BonDriver_GVMVPAZ"] },
     linux: { mark: "wip", date: "—", repos: [] },
+    official: [["製品ページ", "https://www.iodata.jp/product/av/tuner/gv-mvpaz/"], ["サポートライブラリ", "https://www.iodata.jp/lib/product/g/5933.htm"]], officialNote: "",
     note: "実機は未入手です。Windows で使うには純正ドライバーが必要です。" },
   { maker: "Dynaconnective", name: "DY-UD200", conn: "USB 1c11:1004", band: "地デジ", bcas: "本体の差込口（Linux は外付けも可）", prep: true,
     win: { mark: "good", date: "2026-11-22", repos: ["waya0125/BonDriver_Dyna"] },
     linux: { mark: "ok", date: "2026-11-22", repos: ["waya0125/recdyna"] },
+    official: [["有志の BonDriver_dyud の配布ページ（Wayback Machine）", "http://web.archive.org/web/20130527152129/http://dyud200.zxq.net/"], ["有志のまとめ Wiki「USB地デジチューナ DY-UD200 まとめwiki」（atwiki）", "https://w.atwiki.jp/dy-ud200/"]], officialNote: "メーカー（ダイナコネクティブ）は 2010 年 10 月に自己破産を申請し、サイトはなくなっています。代わりに有志の資料を載せています。",
     note: "TVTest 0.10.0 でチャンネルスキャン・選局・録画を確認（D 0 / E 0 / S 0）。Linux では Mirakurun 経由の 30 分の録画で、ドロップは 4 回でした。" },
   { maker: "Quixun", name: "QRS-UT100B", conn: "USB 3275:7020", band: "地デジ", bcas: "本体の差込口（外付けも可）", prep: true,
     win: { mark: "good", date: "2026-11-22", repos: ["waya0125/BonDriver_Friio"] },
     linux: { mark: "ok", date: "2026-11-11", repos: ["waya0125/recfriio"] },
+    official: [["製品ページ（Wayback Machine）", "http://web.archive.org/web/20100224054943/http://www.quixun.co.jp:80/product/qrs-ut100b.html"], ["サポートページ（Wayback Machine）", "http://web.archive.org/web/20100212202729/http://www.quixun.co.jp:80/support/qrs-ut100b.html"]], officialNote: "メーカーのサイトはなくなっています。",
     note: "TVTest 0.10.0 でチャンネルスキャン・選局を確認（E 0 / S 0）。Linux では 30 分の録画で、誤り・欠けはありませんでした。" },
   { maker: "SKNET", name: "MonsterTV U3S（SK-MTVU3S）", conn: "USB 3275:9015", band: "地デジ・BS・CS", bcas: "本体の差込口（外付けも可）", prep: true,
     win: { mark: "good", date: "2026-11-23", repos: ["waya0125/BonDriver_Friio"] },
     linux: { mark: "ok", date: "2026-11-19", repos: ["waya0125/recfriio"] },
+    official: [["製品ページ", "https://sknet-web.co.jp/product/mtvu3s/index.html"], ["ダウンロード", "https://sknet-web.co.jp/product/mtvu3s/download.html"]], officialNote: "",
     note: "TVTest 0.10.0 で選局を確認（D 0 / E 0 / S 0）。Windows は 8.1 以降が必要です。Linux では地デジ・BS・CS の受信で誤り 0 でした。" },
   { maker: "BUFFALO", name: "DT-H45/U2", conn: "USB 0411:0128", band: "地デジ", bcas: "本体の差込口", prep: true,
     win: { mark: "ok", date: "未確認", repos: [["i4M1k0SU/DTH10-series-driver", "BonDriver_DTH"]] },
     linux: { mark: "ok", date: "2026-11-23", repos: [["i4M1k0SU/DTH10-series-driver", "dth コマンド"]] },
+    official: [["製品ページ", "https://www.buffalo.jp/product/detail/dt-h45_u2.html"], ["ソフトウェア", "https://www.buffalo.jp/product/detail/software/dt-h45_u2.html"]], officialNote: "",
     note: "Linux で地デジを受信し、本体の B-CAS での復号を確認しました。ドライバーでは DT-H30/U2 として扱われます（純正ドライバーと同じ）。" },
   { maker: "BUFFALO", name: "DT-H70/U2", conn: "USB 0411:0199", band: "地デジ・BS・CS", bcas: "本体の差込口", prep: true,
     win: { mark: "ok", date: "未確認", repos: [["i4M1k0SU/DTH10-series-driver", "BonDriver_DTH"]] },
     linux: { mark: "ok", date: "2026-11-20", repos: [["i4M1k0SU/DTH10-series-driver", "dth コマンド"]] },
+    official: [["製品ページ", "https://www.buffalo.jp/product/detail/dt-h70_u2.html"], ["ソフトウェア", "https://www.buffalo.jp/product/detail/software/dt-h70_u2.html"]], officialNote: "",
     note: "Linux で地デジ・BS・CS を受信し、本体の B-CAS での復号を確認しました（スクランブル 0）。復号と BS・CS の受信には、純正ソフトの CoBDACom.dll が必要です。BS・CS のアンテナには電源を供給しません。raw モードを一度使うと、電源を入れ直すまで BS・CS を受信できません。" },
   { maker: "BUFFALO", name: "DT-H70/PCIE", conn: "PCIe（中は USB 0411:01BE）", band: "地デジ・BS・CS", bcas: "本体の差込口（未確認）", prep: true,
     win: { mark: "ok", date: "未確認", repos: [["i4M1k0SU/DTH10-series-driver", "BonDriver_DTH"]] },
     linux: { mark: "ok", date: "未確認", repos: [["i4M1k0SU/DTH10-series-driver", "dth コマンド"]] },
+    official: [["製品ページ", "https://www.buffalo.jp/product/detail/dt-h70_pcie.html"], ["ソフトウェア", "https://www.buffalo.jp/product/detail/software/dt-h70_pcie.html"]], officialNote: "",
     note: "DT-H70/U2 の PCIe 版です。手元でも、ドライバーの作者による検証でも、まだ動作を確かめていません。" },
-  { maker: "MyGica", name: "VASTDTV VT20", conn: "USB 3275:0080", band: "地デジ", bcas: "外付けリーダー", prep: true,
+  { maker: "MyGica", name: "VASTDTV VT20", conn: "USB 3275:0080（手元の個体。187f:0600 の個体もある）", band: "地デジ", bcas: "外付けリーダー", prep: true,
     win: { mark: "ok", date: "未確認", repos: [["Till0196/BonDriver_coax", "coax 経由"]] },
     linux: { mark: "ok", date: "2026-10-27", repos: ["Till0196/coax", "Khronos31/siano-userland"] },
-    note: "PLEX の「PX-S1UD」や MyGica の「S270」と同等の機種です（どれも Siano Rio を載せた同じ作り。USB ID は PX-S1UD と同じ）。Linux では、カーネルのドライバー smsusb から外し、ファームウェア isdbt_rio.inp を渡して coax で受信しました（地デジ 4 局で誤り 0）。" },
+    official: [], officialNote: "公式のドライバーはなく、製品にも付いていません。",
+    note: "PLEX の「PX-S1UD」や MyGica の「S270」と同等の機種です（どれも Siano Rio を載せた同じ作り）。手元の個体の USB ID は PX-S1UD と同じ 3275:0080 ですが、S270 と同じ 187f:0600 の個体もあります。Linux では、カーネルのドライバー smsusb から外し、ファームウェア isdbt_rio.inp を渡して coax で受信しました（地デジ 4 局で誤り 0）。" },
   { maker: "Logitec", name: "LDT-1S301U", conn: "USB 1bb0:0514", band: "ワンセグ", bcas: "不要", prep: false,
     win: { mark: "wip", date: "—", repos: [] },
     linux: { mark: "wip", date: "—", repos: [] },
+    official: [], officialNote: "メーカーの製品ページはなくなっています。",
     note: "USB の命令の形を解析しています。" },
 ];
 
@@ -302,6 +317,9 @@ const repoList = repos => repos.length
       return `<li><a href="https://github.com/${esc(full)}">${esc(full)}</a>${own ? "" : '<span class="tag">他の方</span>'}${memo ? `<span class="sub">（${esc(memo)}）</span>` : ""}</li>`;
     }).join("") + "</ul>"
   : "<p>—</p>";
+const official = d => (d.official.length
+  ? "<ul>" + d.official.map(([l, u]) => `<li><a href="${esc(u)}">${esc(l)}</a></li>`).join("") + "</ul>" : "")
+  + (d.officialNote ? `<p>${esc(d.officialNote)}</p>` : "");
 const isOwn = d => [...d.win.repos, ...d.linux.repos].some(r => (Array.isArray(r) ? r[0] : r).startsWith("waya0125/"));
 const isSat = d => /BS|CS/.test(d.band);
 
@@ -324,6 +342,7 @@ function render(filter) {
         <div><h3>Linux（確認日：${esc(d.linux.date)}）</h3>${repoList(d.linux.repos)}</div>
         <div><h3>接続</h3><p>${esc(d.conn)}</p></div>
         <div><h3>事前準備</h3><p>${d.prep ? "あり（各リポジトリの README を参照）" : "—"}</p></div>
+        <div class="wide"><h3>公式ページ</h3>${official(d)}</div>
         <div class="wide"><h3>備考</h3><p>${esc(d.note)}</p></div>
       </div></td>
     </tr>`;
