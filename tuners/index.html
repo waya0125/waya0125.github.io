@@ -172,7 +172,7 @@ footer { margin-top: 32px; font-size: 13px; color: var(--label); }
   <header>
     <h1>チューナー動作確認一覧</h1>
     <p class="lead">手元で開発・保有しているテレビチューナーの、Windows（TVTest）と Linux（Mirakurun・KonomiTV）での動作確認の一覧です。</p>
-    <p class="meta">最終更新：2026-11-24</p>
+    <p class="meta">最終更新：2026-11-26</p>
   </header>
 
   <section class="summary" aria-label="要約" id="summary"></section>
@@ -274,17 +274,17 @@ const devices = [
     note: "TVTest 0.10.0 で選局を確認（D 0 / E 0 / S 0）。Windows は 8.1 以降が必要です。Linux では地デジ・BS・CS の受信で誤り 0 でした。" },
   { maker: "BUFFALO", name: "DT-H45/U2", conn: "USB 0411:0128", band: "地デジ", bcas: "本体の差込口", prep: true,
     win: { mark: "ok", date: "未確認", repos: [["i4M1k0SU/DTH10-series-driver", "BonDriver_DTH"]] },
-    linux: { mark: "ok", date: "2026-11-23", repos: [["i4M1k0SU/DTH10-series-driver", "dth コマンド"]] },
+    linux: { mark: "good", date: "2026-11-25", repos: [["i4M1k0SU/DTH10-series-driver", "dth コマンド"], ["waya0125/recdth", "dth を recpt1 と同じ引数で使うラッパー"]] },
     official: [["製品ページ", "https://www.buffalo.jp/product/detail/dt-h45_u2.html"], ["ソフトウェア", "https://www.buffalo.jp/product/detail/software/dt-h45_u2.html"]], officialNote: "",
-    note: "Linux で地デジを受信し、本体の B-CAS での復号を確認しました。ドライバーでは DT-H30/U2 として扱われます（純正ドライバーと同じ）。" },
+    note: "Linux では recdth を使い、EDCB・Mirakurun 経由で KonomiTV での視聴を確認しました（見つかった不具合はありますが、おおむね動きます）。dth だけでも地デジの受信と本体の B-CAS での復号を確認しています。ドライバーでは DT-H30/U2 として扱われます（純正ドライバーと同じ）。" },
   { maker: "BUFFALO", name: "DT-H70/U2", conn: "USB 0411:0199", band: "地デジ・BS・CS", bcas: "本体の差込口", prep: true,
     win: { mark: "ok", date: "未確認", repos: [["i4M1k0SU/DTH10-series-driver", "BonDriver_DTH"]] },
-    linux: { mark: "ok", date: "2026-11-20", repos: [["i4M1k0SU/DTH10-series-driver", "dth コマンド"]] },
+    linux: { mark: "good", date: "2026-11-25", repos: [["i4M1k0SU/DTH10-series-driver", "dth コマンド"], ["waya0125/recdth", "dth を recpt1 と同じ引数で使うラッパー"]] },
     official: [["製品ページ", "https://www.buffalo.jp/product/detail/dt-h70_u2.html"], ["ソフトウェア", "https://www.buffalo.jp/product/detail/software/dt-h70_u2.html"]], officialNote: "",
-    note: "Linux で地デジ・BS・CS を受信し、本体の B-CAS での復号を確認しました（スクランブル 0）。復号と BS・CS の受信には、純正ソフトの CoBDACom.dll が必要です。BS・CS のアンテナには電源を供給しません。raw モードを一度使うと、電源を入れ直すまで BS・CS を受信できません。" },
+    note: "Linux では recdth を使い、EDCB・Mirakurun 経由で KonomiTV での視聴を確認しました（見つかった不具合はありますが、おおむね動きます）。dth だけでも地デジ・BS・CS の受信と、本体の B-CAS での復号を確認しています（スクランブル 0）。復号と BS・CS の受信には、純正ソフトの CoBDACom.dll が必要です。BS・CS のアンテナには電源を供給しません。raw モードを一度使うと、電源を入れ直すまで BS・CS を受信できません。" },
   { maker: "BUFFALO", name: "DT-H70/PCIE", conn: "PCIe（中は USB 0411:01BE）", band: "地デジ・BS・CS", bcas: "本体の差込口（未確認）", prep: true,
     win: { mark: "ok", date: "未確認", repos: [["i4M1k0SU/DTH10-series-driver", "BonDriver_DTH"]] },
-    linux: { mark: "ok", date: "未確認", repos: [["i4M1k0SU/DTH10-series-driver", "dth コマンド"]] },
+    linux: { mark: "ok", date: "未確認", repos: [["i4M1k0SU/DTH10-series-driver", "dth コマンド"], ["waya0125/recdth", "dth を recpt1 と同じ引数で使うラッパー。実機は未確認"]] },
     official: [["製品ページ", "https://www.buffalo.jp/product/detail/dt-h70_pcie.html"], ["ソフトウェア", "https://www.buffalo.jp/product/detail/software/dt-h70_pcie.html"]], officialNote: "",
     note: "DT-H70/U2 の PCIe 版です。手元でも、ドライバーの作者による検証でも、まだ動作を確かめていません。" },
   { maker: "MyGica", name: "VASTDTV VT20", conn: "USB 3275:0080（手元の個体。187f:0600 の個体もある）", band: "地デジ", bcas: "外付けリーダー", prep: true,
